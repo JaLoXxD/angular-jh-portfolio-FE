@@ -1,0 +1,21 @@
+<div class="skill-card__box" #box>
+  <div class="skill-card__image">
+    <img [src]="skill().image" [alt]="skill().title" width="50" height="50" />
+  </div>
+
+  <div class="skill-card__percent" [style.--percent]="skill().percent" [style.--percent-offset]="circleOffset()">
+    <svg class="skill-card__ring" viewBox="0 0 150 150" aria-hidden="true">
+      <circle cx="75" cy="75" r="70" class="skill-card__track" />
+      <circle cx="75" cy="75" r="70" class="skill-card__progress" />
+    </svg>
+    <div class="skill-card__number">
+      <span class="skill-card__num"></span><span class="skill-card__sign">%</span>
+    </div>
+  </div>
+
+  <h3 class="skill-card__title">{{ skill().title }}</h3>
+
+  <div class="skill-card__description">
+    <p>{{ skill().descriptionKey | translate }}</p>
+  </div>
+</div>

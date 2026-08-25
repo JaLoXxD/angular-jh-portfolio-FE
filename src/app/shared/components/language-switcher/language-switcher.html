@@ -1,0 +1,13 @@
+<div class="lang-switcher" role="group" [attr.aria-label]="'nav.toggleMenu' | translate">
+  @for (lang of langs; track lang.code) {
+    <button
+      type="button"
+      class="lang-switcher__option"
+      [class.lang-switcher__option--active]="i18n.lang() === lang.code"
+      [attr.aria-pressed]="i18n.lang() === lang.code"
+      (click)="i18n.setLang(lang.code)"
+    >
+      {{ lang.label }}
+    </button>
+  }
+</div>

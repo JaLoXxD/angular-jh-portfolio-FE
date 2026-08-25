@@ -1,0 +1,124 @@
+.experience {
+  display: flex;
+  gap: 40px;
+  margin: 60px auto 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+.experience__tabs {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--color-accent);
+  width: 35%;
+}
+
+.experience__tab {
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--color-text);
+  padding: 12px 20px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 18px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+  &:hover {
+    background-color: var(--color-brand-dark);
+    color: var(--color-accent);
+  }
+
+  &--active {
+    background-color: var(--color-brand-dark);
+    color: var(--color-accent);
+  }
+}
+
+.experience__panel {
+  width: 65%;
+  text-align: start;
+}
+
+.experience__content {
+  display: flex;
+  flex-direction: column;
+  animation: experience-fade 0.5s ease;
+}
+
+@keyframes experience-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.experience__role {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 10px;
+}
+
+.experience__duration {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.experience__duration-label {
+  font-size: 17px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.experience__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: var(--color-text-muted);
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 17px;
+
+    &::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-light);
+      font-size: 12px;
+      top: 10px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .experience {
+    flex-direction: column;
+  }
+
+  .experience__tabs {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: none;
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .experience__panel {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .experience__tab {
+    font-size: 15px;
+  }
+}

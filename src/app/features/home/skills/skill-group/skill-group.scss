@@ -1,0 +1,32 @@
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+
+  &__title {
+    color: var(--color-accent);
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0 0 10px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .skill-group__title {
+    text-align: center;
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-group__title {
+    font-size: 26px;
+  }
+}

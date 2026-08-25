@@ -1,0 +1,37 @@
+@if (popup.currentProject(); as project) {
+  <div class="project-popup" #panel>
+    <button type="button" class="project-popup__close" (click)="popup.close()" [attr.aria-label]="'common.close' | translate">
+      <app-icon name="close" />
+    </button>
+
+    <div class="project-popup__image">
+      <img [src]="project.image" [alt]="project.titleKey | translate" />
+    </div>
+
+    <div class="project-popup__info">
+      <h2>{{ project.titleKey | translate }}</h2>
+      <p>{{ project.descriptionKey | translate }}</p>
+
+      <ul class="project-popup__links">
+        <li>
+          <a [href]="project.gitHubUrl" target="_blank" rel="noopener" [attr.title]="'projects.viewGithub' | translate">
+            <app-icon name="github" />
+          </a>
+        </li>
+        @if (project.projectUrl) {
+          <li>
+            <a [href]="project.projectUrl" target="_blank" rel="noopener" [attr.title]="'projects.viewProject' | translate">
+              <app-icon name="link" />
+            </a>
+          </li>
+        }
+      </ul>
+
+      <div class="project-popup__technologies">
+        @for (technology of project.technologies; track technology) {
+          <span class="project-popup__tech">{{ technology }}</span>
+        }
+      </div>
+    </div>
+  </div>
+}

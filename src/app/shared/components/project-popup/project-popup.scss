@@ -1,0 +1,157 @@
+:host {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+:host(.project-popup-backdrop--visible) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.project-popup {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  background-color: var(--color-bg);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+
+    app-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__image {
+    background-color: #f1f2f3;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    width: 40%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    h2,
+    p {
+      text-align: start;
+    }
+
+    h2 {
+      color: var(--color-accent-light);
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #fff;
+      overflow-y: auto;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 12px 0;
+
+    li {
+      width: 26px;
+      transition: transform 0.4s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    a {
+      color: var(--color-accent-light);
+      display: block;
+    }
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  &__tech {
+    cursor: default;
+    background-color: var(--color-accent-light);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-accent);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-popup {
+    height: 80vh;
+
+    &__info,
+    &__image {
+      width: 100%;
+    }
+
+    &__image {
+      height: 55%;
+    }
+
+    &__info {
+      height: 45%;
+    }
+
+    &__info h2 {
+      font-size: 24px;
+    }
+  }
+}

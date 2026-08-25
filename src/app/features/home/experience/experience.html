@@ -1,0 +1,43 @@
+<app-section-title [text]="'experience.title' | translate" />
+
+<div class="experience">
+  <div class="experience__tabs" role="tablist">
+    @for (job of jobs; track job.id) {
+      <button
+        type="button"
+        role="tab"
+        class="experience__tab"
+        [class.experience__tab--active]="activeJobId() === job.id"
+        [attr.aria-selected]="activeJobId() === job.id"
+        (click)="selectJob(job.id)"
+      >
+        {{ job.companyKey | translate }}
+      </button>
+    }
+  </div>
+
+  <div class="experience__panel">
+    @for (job of jobs; track job.id) {
+      @if (activeJobId() === job.id) {
+        <div class="experience__content">
+          <h3 class="experience__role">{{ job.roleKey | translate }}</h3>
+
+          <div class="experience__duration">
+            <p><span class="experience__duration-label">{{ job.startDate | date: 'MMMM y' : undefined : dateLocale() }}</span></p>
+            <p>
+              <span class="experience__duration-label">{{
+                job.endDate ? (job.endDate | date: 'MMMM y' : undefined : dateLocale()) : ('experience.present' | translate)
+              }}</span>
+            </p>
+          </div>
+
+          <ul class="experience__bullets">
+            @for (bullet of i18n.list(job.bulletsKey); track $index) {
+              <li>{{ bullet }}</li>
+            }
+          </ul>
+        </div>
+      }
+    }
+  </div>
+</div>

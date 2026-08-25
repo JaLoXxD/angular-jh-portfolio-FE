@@ -1,0 +1,11 @@
+<div class="certifications">
+  <h3 class="certifications__title">{{ 'certifications.title' | translate }}</h3>
+  <ul class="certifications__list">
+    @for (cert of certifications; track cert.id) {
+      <li class="certifications__item">
+        <span class="certifications__name">{{ cert.titleKey | translate }}</span>
+        <span class="certifications__meta">{{ cert.issuer }} · {{ cert.year }}</span>
+      </li>
+    }
+  </ul>
+</div>

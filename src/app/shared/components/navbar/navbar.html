@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="navbar__bar">
+    <a href="#info" class="navbar__brand" (click)="closeMenu()">
+      <img src="/images/logo.png" alt="Jorge Hidalgo" class="navbar__logo" />
+    </a>
+
+    <button
+      type="button"
+      class="navbar__toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="'nav.toggleMenu' | translate"
+    >
+      <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+    </button>
+
+    <div class="navbar__collapse" [class.navbar__collapse--open]="menuOpen()">
+      <ul class="navbar__links">
+        @for (link of links; track link.id) {
+          <li [class.navbar__item--active]="activeSection.activeSectionId() === link.id">
+            <a [href]="'#' + link.id" (click)="closeMenu()">{{ link.labelKey | translate }}</a>
+          </li>
+        }
+      </ul>
+
+      <div class="navbar__actions">
+        <app-language-switcher />
+        <a href="/docs/Jorge_Hidalgo_Resume.pdf" download="Jorge_Hidalgo_Resume.pdf" class="navbar__cv-button">
+          <app-icon name="download" />
+          {{ 'nav.downloadCv' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
