@@ -11,6 +11,10 @@
   }
 }
 
+.section--compact {
+  min-height: 60vh;
+}
+
 @media (max-width: 600px) {
   .section {
     padding-top: 100px;

@@ -14,6 +14,7 @@ const NAV_LINKS: NavLink[] = [
   { id: 'skills', labelKey: 'nav.skills' },
   { id: 'experience', labelKey: 'nav.experience' },
   { id: 'projects', labelKey: 'nav.projects' },
+  { id: 'contact', labelKey: 'nav.contact' },
 ];
 
 @Component({

@@ -11,6 +11,7 @@ export const es: TranslationDictionary = {
     skills: 'Habilidades',
     experience: 'Experiencia',
     projects: 'Proyectos',
+    contact: 'Contacto',
     downloadCv: 'Descargar CV',
     toggleMenu: 'Abrir menú de navegación',
   },
@@ -75,8 +76,7 @@ export const es: TranslationDictionary = {
         company: 'AlphaCrew Studio',
         role: 'Desarrollador Full-Stack',
         bullets: [
-          'Desarrollé APIs REST con Node.js y Flask para aplicaciones en producción.',
-          'Integré Firebase (Firestore, Authentication, Cloud Functions) en proyectos de clientes.',
+          'Desarrollé APIs REST con Node.js y Flask para aplicaciones en producción.', 'Integré Firebase (Firestore, Authentication, Cloud Functions) en proyectos de clientes.',
           'Construí una extensión de Chrome para web scraping automatizado.',
           'Implementé chat en tiempo real con Node.js y Socket.io.',
         ],

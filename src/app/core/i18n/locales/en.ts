@@ -11,6 +11,7 @@ export const en: TranslationDictionary = {
     skills: 'Skills',
     experience: 'Experience',
     projects: 'Projects',
+    contact: 'Contact',
     downloadCv: 'Download CV',
     toggleMenu: 'Toggle navigation menu',
   },
