@@ -6,4 +6,4 @@ export interface Skill {
   descriptionKey: string;
 }
 
-export type SkillGroupKey = 'frontend' | 'backend' | 'other';
+export type SkillGroupKey = 'frontend' | 'backend' | 'mobile' | 'other';

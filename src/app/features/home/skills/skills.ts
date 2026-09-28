@@ -15,5 +15,6 @@ import { Certifications } from './certifications/certifications';
 export class Skills {
   protected readonly frontendSkills = SKILL_GROUPS.frontend;
   protected readonly backendSkills = SKILL_GROUPS.backend;
+  protected readonly mobileSkills = SKILL_GROUPS.mobile;
   protected readonly otherSkills = SKILL_GROUPS.other;
 }

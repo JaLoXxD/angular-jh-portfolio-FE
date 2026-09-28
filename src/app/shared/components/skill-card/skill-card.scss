@@ -147,19 +147,23 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 82%;
-  height: 100px;
+  bottom: 0;
+  min-height: 90px;
+  max-height: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
+  padding: 14px 16px;
   opacity: 0;
+  transform: translateY(100%);
   background-color: var(--color-accent-light);
   border-radius: 0 0 24px 24px;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.35;
     font-family: monospace;
     color: #fff;
     margin: 0;
@@ -167,6 +171,6 @@
 }
 
 .skill-card__box:hover .skill-card__description {
-  top: 78%;
+  transform: translateY(0);
   opacity: 1;
 }
