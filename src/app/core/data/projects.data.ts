@@ -2,11 +2,23 @@ import { Project } from '../models/project.model';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'movingChecklist',
+    titleKey: 'projects.items.movingChecklist.title',
+    descriptionKey: 'projects.items.movingChecklist.description',
+    image: '/images/projects/moving-checklist.webp',
+    repositories: [
+      { url: 'https://github.com/JaLoXxD/moving-checklist-FE', labelKey: 'projects.frontend' },
+      { url: 'https://github.com/JaLoXxD/moving-checklist-BE', labelKey: 'projects.backend' },
+    ],
+    projectUrl: 'https://jhidalgo-dev.cloud/moving-checklist/',
+    technologies: ['Angular', 'Spring Boot', 'MySQL', 'Docker'],
+  },
+  {
     id: 'hairdressing',
     titleKey: 'projects.items.hairdressing.title',
     descriptionKey: 'projects.items.hairdressing.description',
     image: '/images/projects/hairdressing.png',
-    gitHubUrl: 'https://github.com/JaLoXxD/Hairdressing-BackEnd',
+    repositories: [{ url: 'https://github.com/JaLoXxD/Hairdressing-BackEnd' }],
     projectUrl: 'https://hairdressing-jh.netlify.app/',
     technologies: ['Vue3', 'Node.js', 'MongoDB'],
   },
@@ -15,7 +27,7 @@ export const PROJECTS: Project[] = [
     titleKey: 'projects.items.dashboard.title',
     descriptionKey: 'projects.items.dashboard.description',
     image: '/images/projects/dashboard-design.png',
-    gitHubUrl: 'https://github.com/JaLoXxD/react-dashboard',
+    repositories: [{ url: 'https://github.com/JaLoXxD/react-dashboard' }],
     projectUrl: 'https://jaloxxd.github.io/react-dashboard/',
     technologies: ['React'],
   },
@@ -24,7 +36,7 @@ export const PROJECTS: Project[] = [
     titleKey: 'projects.items.picoPlaca.title',
     descriptionKey: 'projects.items.picoPlaca.description',
     image: '/images/projects/pico-placa.png',
-    gitHubUrl: 'https://github.com/JaLoXxD/pico-placa-frontend',
+    repositories: [{ url: 'https://github.com/JaLoXxD/pico-placa-frontend' }],
     projectUrl: 'https://jaloxxd.github.io/pico-placa-frontend/',
     technologies: ['React', 'Node.js'],
   },
@@ -33,7 +45,7 @@ export const PROJECTS: Project[] = [
     titleKey: 'projects.items.spotify.title',
     descriptionKey: 'projects.items.spotify.description',
     image: '/images/projects/spotify-app.png',
-    gitHubUrl: 'https://github.com/JaLoXxD/spotify-app-frontend',
+    repositories: [{ url: 'https://github.com/JaLoXxD/spotify-app-frontend' }],
     technologies: ['Angular', 'Spotify Web API', 'OAuth'],
   },
 ];

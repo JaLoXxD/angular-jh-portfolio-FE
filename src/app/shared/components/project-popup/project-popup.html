@@ -13,11 +13,16 @@
       <p>{{ project.descriptionKey | translate }}</p>
 
       <ul class="project-popup__links">
-        <li>
-          <a [href]="project.gitHubUrl" target="_blank" rel="noopener" [attr.title]="'projects.viewGithub' | translate">
-            <app-icon name="github" />
-          </a>
-        </li>
+        @for (repository of project.repositories; track repository.url) {
+          <li>
+            <a [href]="repository.url" target="_blank" rel="noopener" [attr.title]="'projects.viewGithub' | translate">
+              <app-icon name="github" />
+              @if (repository.labelKey) {
+                <span class="project-popup__link-label">{{ repository.labelKey | translate }}</span>
+              }
+            </a>
+          </li>
+        }
         @if (project.projectUrl) {
           <li>
             <a [href]="project.projectUrl" target="_blank" rel="noopener" [attr.title]="'projects.viewProject' | translate">

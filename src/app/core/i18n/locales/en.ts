@@ -109,7 +109,14 @@ export const en: TranslationDictionary = {
     title: 'Projects',
     viewGithub: 'GitHub repository',
     viewProject: 'Open project',
+    frontend: 'Frontend',
+    backend: 'Backend',
     items: {
+      movingChecklist: {
+        title: 'Moving Checklist',
+        description:
+          'A shareable moving checklist: the admin manages items with photos, and friends open the public link to mark what they will gift, anonymously and with no sign-up. Angular with signals on the frontend and Spring Boot with MySQL on the backend, deployed with Docker on a VPS.',
+      },
       hairdressing: {
         title: 'Hairdressing App',
         description:

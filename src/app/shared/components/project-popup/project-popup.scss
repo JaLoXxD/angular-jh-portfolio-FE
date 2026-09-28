@@ -97,7 +97,7 @@
     margin: 12px 0;
 
     li {
-      width: 26px;
+      min-width: 26px;
       transition: transform 0.4s ease-in-out;
 
       &:hover {
@@ -107,8 +107,15 @@
 
     a {
       color: var(--color-accent-light);
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
     }
+  }
+
+  &__link-label {
+    font-size: 14px;
   }
 
   &__technologies {

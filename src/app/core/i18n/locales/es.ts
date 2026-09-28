@@ -108,7 +108,14 @@ export const es: TranslationDictionary = {
     title: 'Proyectos',
     viewGithub: 'Repositorio en GitHub',
     viewProject: 'Ver proyecto',
+    frontend: 'Frontend',
+    backend: 'Backend',
     items: {
+      movingChecklist: {
+        title: 'Lista de Mudanza',
+        description:
+          'Una lista de mudanza compartible: el admin gestiona los items con fotos y los amigos entran al link público para marcar lo que van a regalar, de forma anónima y sin registro. Angular con signals en el frontend y Spring Boot con MySQL en el backend, desplegado con Docker en un VPS.',
+      },
       hairdressing: {
         title: 'Hairdressing App',
         description:
